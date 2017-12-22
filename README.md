@@ -1,5 +1,18 @@
 # linlin
 Spring Boot
+
+### 基本环境
+
+```
+E:\ws\linlin>mvn -v
+Apache Maven 3.5.2 (138edd61fd100ec658bfa2d307c43b76940a5d7d; 2017-10-18T15:58:13+08:00)
+Maven home: D:\Soft\apache-maven-3.5.2\bin\..
+Java version: 1.8.0_151, vendor: Oracle Corporation
+Java home: C:\Program Files\Java\jdk1.8.0_151\jre
+Default locale: zh_CN, platform encoding: GBK
+OS name: "windows 10", version: "10.0", arch: "amd64", family: "windows"
+```
+
 ### [基本项目搭建](https://github.com/xiaohanhu/linlin/tree/build)
 - 创建maven项目
 - 添加pom依赖(pom.xml)
