@@ -35,21 +35,21 @@ public class UserController {
         ReturnBase<String> result = new ReturnBase<>();
         try {
             if (StringUtils.isEmpty(user.getMobile()) ||11 != user.getMobile().length()) {
-                result.setRstCode(-1);
+                result.setRetCode(-1);
                 result.setRetMsg("请输入正确的手机号！");
                 return result;
             }
             if (StringUtils.isEmpty(user.getPassword())) {
-                result.setRstCode(-1);
+                result.setRetCode(-1);
                 result.setRetMsg("请设置密码！");
                 return result;
             }
             userService.save(user);
-            result.setRstCode(1);
+            result.setRetCode(1);
             result.setRetMsg("注册成功！");
             return result;
         }catch (Exception e){
-            result.setRstCode(-1);
+            result.setRetCode(-1);
             result.setRetMsg(e.getMessage());
         }
         return result;
@@ -82,14 +82,14 @@ public class UserController {
         ReturnBase<String> result = new ReturnBase<>();
         try {
             if (StringUtils.isEmpty(user.getId())){
-                result.setRstCode(-1);
+                result.setRetCode(-1);
                 result.setRetMsg("请输入用户id");
             }
             userService.edit(user);
-            result.setRstCode(1);
+            result.setRetCode(1);
             result.setRetMsg("修改成功");
         }catch (Exception e) {
-            result.setRstCode(-1);
+            result.setRetCode(-1);
             result.setRetMsg(e.getMessage());
             logger.error("[user-edit]" ,e);
         }
@@ -106,15 +106,15 @@ public class UserController {
         ReturnBase<String> result = new ReturnBase<>();
         try {
             if (null == userId){
-                result.setRstCode(-1);
+                result.setRetCode(-1);
                 result.setRetMsg("请输入用户id");
                 return result;
             }
             userService.remove(userId);
-            result.setRstCode(-1);
+            result.setRetCode(-1);
             result.setRetMsg("删除成功！");
         }catch (Exception e) {
-            result.setRstCode(-1);
+            result.setRetCode(-1);
             result.setRetMsg(e.getMessage());
             logger.error("[user-remove]", e);
         }

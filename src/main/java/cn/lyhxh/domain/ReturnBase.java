@@ -2,18 +2,18 @@ package cn.lyhxh.domain;
 
 public class ReturnBase<T> {
 
-    private Integer rstCode;
+    private Integer retCode;
 
     private String retMsg;
 
     private T result;
 
-    public Integer getRstCode() {
-        return rstCode;
+    public Integer getRetCode() {
+        return retCode;
     }
 
-    public void setRstCode(Integer rstCode) {
-        this.rstCode = rstCode;
+    public void setRetCode(Integer retCode) {
+        this.retCode = retCode;
     }
 
     public String getRetMsg() {
